@@ -12,9 +12,11 @@ const onSourceSelect = () => {
   startScreen.classList.add("hidden");
   overlay.classList.add("hidden");
   setInterval(() => {
-    fpsBlock.querySelectorAll("span").forEach((el) => {
-      el.innerText = fps[el.id].toFixed(1);
-    });
+    if (fpsBlock) {
+      fpsBlock?.querySelectorAll("span").forEach((el) => {
+        el.innerText = fps[el.id].toFixed(1);
+      });
+    }
   });
 };
 
@@ -32,3 +34,10 @@ const onImageSelect = (e) => {
 
 webcamSourceButton.addEventListener("click", onWebcamSelect);
 imageSourceButton.addEventListener("change", onImageSelect);
+
+// Tự động khởi động webcam khi trang load
+window.addEventListener("load", () => {
+  // Tạo một event giả để trigger onWebcamSelect
+  const mockEvent = { target: { value: "webcam" } };
+  onWebcamSelect(mockEvent);
+});
