@@ -247,11 +247,12 @@ canvas {
 
 .technologies {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   height: 60px;
   margin: 0;
   gap: 10px;
   overflow-x: auto;
+  margin-bottom: 10px;
 }
 
 .technology {
