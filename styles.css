@@ -236,20 +236,22 @@ canvas {
   background: rgba(17, 24, 39, 0.95);
   backdrop-filter: blur(12px);
   border-top: 1px solid rgba(55, 65, 81, 0.5);
-  padding: 1rem;
-  padding-bottom: 2rem;
+  /* padding: 1rem;
+  padding-bottom: 2rem; */
   z-index: 50;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
   box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.5);
-  padding-top: 100px;
+  padding-top: 10px;
 }
 
 .technologies {
   display: flex;
   justify-content: space-between;
   height: 60px;
-  margin: 0 55px;
+  margin: 0;
+  gap: 10px;
+  overflow-x: auto;
 }
 
 .technology {
@@ -257,6 +259,7 @@ canvas {
   align-items: center;
   flex-wrap: nowrap;
   text-align: center;
+  white-space: nowrap;
 }
 
 input[type="radio"] {
@@ -295,10 +298,11 @@ input[name="tech"]:checked+label:after {
 .categories {
   font-size: 13px;
   display: flex;
-  height: 40px;
-  justify-content: center;
+  /* height: 40px; */
+  /* justify-content: center; */
   margin-top: 16px;
   padding: 2px 16px;
+  overflow-x: auto;
 }
 
 .categories.categories-long {
